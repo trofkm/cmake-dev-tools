@@ -109,3 +109,8 @@ pkg_build_config(NAME "lib${LIBGIT2_FILENAME}"
 	PRIVATE_LIBS ${LIBGIT2_PC_LIBS}
 	REQUIRES ${LIBGIT2_PC_REQUIRES})
 ```
+
+
+## ide-split-sources
+
+Splits the source files up into their appropriate subdirectories.
