@@ -50,9 +50,33 @@ include(message)
 add_subdir_with_message("foo")
 # prints "======= SUBDIRECTORY: FOO ======="
 
-begin_header(dependencies)
+begin_header(cmake)
+begin_header(is)
+begin_header(awesome)
+begin_header(isn't)
+begin_header(it.)
+begin_header(Amount)
+begin_header(of)
+begin_header(tabs)
+begin_header(increases.)
 end_header()
-# prints "======= DEPENDENCIES ========"
+end_header()
+end_header()
+end_header()
+end_header()
+end_header()
+end_header()
+end_header()
+# prints:
+# ======= CMAKE =======
+# **** is ****
+# --- awesome ---
+#    isn't
+#     it.
+#      Amount
+#       of
+#        tabs
+#         increases.
 
 h1(H1)
 h2(H2)
