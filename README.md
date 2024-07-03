@@ -21,7 +21,7 @@ add_dev_tools_targets(
 
 `CPP_SEARCH_PATHS` - paths to search for cpp sources and headers.
 
-`CPP_EXTENSIONS` - extensions of cpp files.
+`CPP_EXTENSIONS` - extensions of cpp sources and headers.
 
 `USE_GLOB_RECURSIVE` - whether to use glob recursive (DEFAULT: ON).
 
