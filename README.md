@@ -37,3 +37,34 @@ After adding the targets, the project will have the following targets:
 By default, it takes `.clang-format` and `.clang-tidy` from the root dir of the project.
 
 I found this script useful for checking code style on CI and one-click formatting from the IDE.
+
+
+## message
+
+Adds cmake macros for beautiful messages.
+
+Example:
+
+```cmake
+include(message)
+add_subdir_with_message("foo")
+# prints "======= SUBDIRECTORY: FOO ======="
+
+begin_header(dependencies)
+end_header()
+# prints "======= DEPENDENCIES ========"
+
+h1(H1)
+h2(H2)
+h3(H3)
+# prints:
+# ======= H1 =======
+# **** H2 ****
+# --- H3 ---
+```
+
+## setup-project
+
+Sets up `ccache`, `ninja` and some optimizations for the project.
+
+Include it after `project` declaration.
