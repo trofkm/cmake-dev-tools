@@ -38,7 +38,6 @@ By default, it takes `.clang-format` and `.clang-tidy` from the root dir of the 
 
 I found this script useful for checking code style on CI and one-click formatting from the IDE.
 
-
 ## message
 
 Adds cmake macros for beautiful messages.
@@ -97,20 +96,22 @@ Include it after `project` declaration.
 
 Create pkg config for the targets.
 
-
 **Example:**
 
 ```cmake
 include(pkg-build-config)
 pkg_build_config(NAME "lib${LIBGIT2_FILENAME}"
-	VERSION ${libgit2_VERSION}
-	DESCRIPTION "The git library, take 2"
-	LIBS_SELF ${LIBGIT2_FILENAME}
-	PRIVATE_LIBS ${LIBGIT2_PC_LIBS}
-	REQUIRES ${LIBGIT2_PC_REQUIRES})
+        VERSION ${libgit2_VERSION}
+        DESCRIPTION "The git library, take 2"
+        LIBS_SELF ${LIBGIT2_FILENAME}
+        PRIVATE_LIBS ${LIBGIT2_PC_LIBS}
+        REQUIRES ${LIBGIT2_PC_REQUIRES})
 ```
-
 
 ## ide-split-sources
 
-Splits the source files up into their appropriate subdirectories.
+Split the source files up into their appropriate subdirectories.
+
+## add-compiler-flag-if-supported
+
+Add compiler flag if the compiler supports it.
