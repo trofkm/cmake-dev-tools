@@ -6,7 +6,7 @@ Set of tools to make the development easier.
 
 Adds clang-format and clang-tidy targets to the project.
 
-Example:
+**Example:**
 
 ```cmake
 include(clang-cxx-dev-tools)
@@ -43,7 +43,7 @@ I found this script useful for checking code style on CI and one-click formattin
 
 Adds cmake macros for beautiful messages.
 
-Example:
+**Example:**
 
 ```cmake
 include(message)
@@ -92,3 +92,20 @@ h3(H3)
 Sets up `ccache`, `ninja` and some optimizations for the project.
 
 Include it after `project` declaration.
+
+## pkg-build-config
+
+Create pkg config for the targets.
+
+
+**Example:**
+
+```cmake
+include(pkg-build-config)
+pkg_build_config(NAME "lib${LIBGIT2_FILENAME}"
+	VERSION ${libgit2_VERSION}
+	DESCRIPTION "The git library, take 2"
+	LIBS_SELF ${LIBGIT2_FILENAME}
+	PRIVATE_LIBS ${LIBGIT2_PC_LIBS}
+	REQUIRES ${LIBGIT2_PC_REQUIRES})
+```
