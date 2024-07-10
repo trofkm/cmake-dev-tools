@@ -62,6 +62,10 @@ macro(add_dev_tools_targets)
         set(DEV_TOOLS_TARGET_NAME_PREFIX ${PROJECT_NAME})
     endif ()
 
+    if (NOT DEV_TOOLS_USE_GLOB_RECURSIVE)
+        set(DEV_TOOLS_USE_GLOB_RECURSIVE ON)
+    endif()
+
     set(_cpp_search_paths_regex)
     foreach (ext ${DEV_TOOLS_CPP_EXTENSIONS})
         foreach (dir ${DEV_TOOLS_CPP_SEARCH_PATHS})
@@ -74,8 +78,7 @@ macro(add_dev_tools_targets)
     set(_all_cxx_source_files)
 
     foreach (path ${_cpp_search_paths_regex})
-        if (_use_glob_recursive)
-
+        if (DEV_TOOLS_USE_GLOB_RECURSIVE)
             file(GLOB_RECURSE
                     _found_cxx_files
                     ${path}
