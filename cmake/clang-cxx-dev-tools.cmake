@@ -1,6 +1,5 @@
 #
 # Author: Kirill Trofimov
-# Email: k.trofimov@geoscan.ru
 # Date: 05.12.23
 #
 # To the extent possible under law, the author(s) have dedicated all
