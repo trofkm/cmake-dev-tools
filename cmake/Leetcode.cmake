@@ -1,0 +1,12 @@
+# add target with prefix leetcode_ for each cpp file found in passed dir
+# EXAMPLE: scan_for_leetcodes("src")
+function(scan_for_leetcodes _scan_dir)
+    file(GLOB _leetcodes ${_scan_dir}/*.cpp)
+    foreach (_leetcode ${_leetcodes})
+        get_filename_component(_leetcode_name ${_leetcode} NAME_WLE)
+        set(leetcode_name "leetcode_${_leetcode_name}")
+        add_executable(${leetcode_name} ${_leetcode})
+        target_link_libraries(${leetcode_name} Threads::Threads)
+        add_test(scan_for_leetcodes ${leetcode_name})
+    endforeach ()
+endfunction()
