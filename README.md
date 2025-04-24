@@ -92,6 +92,8 @@ Sets up `ccache`, `ninja` and some optimizations for the project.
 
 Include it after `project` declaration.
 
+Introduces a bunch of `enable_*` commands.
+
 ## pkg-build-config
 
 Create pkg config for the targets.
